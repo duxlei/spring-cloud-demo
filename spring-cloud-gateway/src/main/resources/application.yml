@@ -1,0 +1,23 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: duxlei_route
+          uri: http://localhost:9002
+          predicates:
+          - Path=/shop-ops/*
+          - Header=reqId,\d+
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/

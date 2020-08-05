@@ -1,0 +1,18 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: spring-cloud-user-biz
+  security:
+    user:
+      name: duxlei
+      password: 123
+
+eureka:
+  instance:
+    metadata-map:
+      swagger-name: 用户服务
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
