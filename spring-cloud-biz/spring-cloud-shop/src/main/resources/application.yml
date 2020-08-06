@@ -1,11 +1,13 @@
-app.id: spring-cloud-biz-shop
 #app.id: SampleApp
+#app.id: spring-cloud-biz-shop
+app.id: ext-spring-md-shop-crm-api
 apollo:
   bootstrap:
     enabled: true
     eagerLoad:
       enabled: true
-    namespaces: application
+#    namespaces: MD.application-temp-test
+#    namespaces: application
   autoUpdateInjectedSpringProperties: true
 
 server:
@@ -36,7 +38,7 @@ logging:
   level:
     springfox: debug
     duxlei: debug
-    com.ctrip.framework.apollo.use.cases.spring.cloud.logger: debug
+    com.ctrip.framework: debug
 management:
   endpoints:
     # 暴露 EndPoint 以供访问，有jmx和web两种方式，exclude 的优先级高于 include
@@ -50,8 +52,8 @@ management:
         include: ["health","info","beans","mappings","logfile","metrics","shutdown","env"]
       base-path: /actuator  # 配置 Endpoint 的基础路径
       cors: # 配置跨域资源共享
-        allowed-origins: http://example.com
-        allowed-methods: GET,POST
+        allowed-origins: '*'
+        allowed-methods: '*'
     enabled-by-default: true # 修改全局 endpoint 默认设置
   endpoint:
     auditevents: # 1、显示当前引用程序的审计事件信息，默认开启

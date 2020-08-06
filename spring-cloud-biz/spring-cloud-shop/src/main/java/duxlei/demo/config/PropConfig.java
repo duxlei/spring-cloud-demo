@@ -24,7 +24,6 @@ import java.util.Set;
  * @date 2020/8/5 23:16
  */
 @Configuration
-@EnableApolloConfig
 public class PropConfig {
     Logger logger = LoggerFactory.getLogger(getClass());
 

@@ -35,7 +35,7 @@ public class ApolloController {
     @GetMapping
     @ApiOperation("读取Apollo配置")
     public Object getConfig() {
-        return timeout + " : " + prop.getTimeout();
+        return timeout + " : " + prop.getTimeout() + " : " + prop.getAge();
     }
 
 

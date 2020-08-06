@@ -20,4 +20,7 @@ import org.springframework.beans.factory.annotation.Value;
 public class Prop {
     @Value("${shop.username}")
     private String timeout;
+
+    @Value("${shop.age}")
+    private Integer age;
 }

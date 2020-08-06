@@ -10,7 +10,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableApolloConfig
+@EnableApolloConfig(value = {"MD.application-temp-test", "application"})
 public class ShopBizApplication {
     public static void main(String[] args) {
         SpringApplication.run(ShopBizApplication.class, args);
