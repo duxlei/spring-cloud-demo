@@ -6,9 +6,9 @@ apollo:
     enabled: true
     eagerLoad:
       enabled: true
-#    namespaces: MD.application-temp-test
-#    namespaces: application
+#    namespaces: application,MD.application-temp-test,MD.application-temp-public
   autoUpdateInjectedSpringProperties: true
+  refreshInterval: 1
 
 server:
   port: 9002
@@ -39,6 +39,7 @@ logging:
     springfox: debug
     duxlei: debug
     com.ctrip.framework: debug
+
 management:
   endpoints:
     # 暴露 EndPoint 以供访问，有jmx和web两种方式，exclude 的优先级高于 include
